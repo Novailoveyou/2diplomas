@@ -1,0 +1,41 @@
+.popup-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&__title {
+		font-size: 2.8rem;
+		margin-bottom: 1rem;
+		@media screen and ( max-width: $large-tablet ) {
+			font-size: 2.4rem;
+			text-align: center;
+		}
+
+		@media screen and ( max-width: $small-tablet ) {
+			&::before {
+				left: 1rem;
+			}
+		}
+	}
+
+	&__sub-title {
+		font-size: 1.4rem;
+		line-height: 127.1%;
+		text-align: center;
+		color: #838488;
+		margin-bottom: 3.5rem;
+		span {
+			color: $primary;
+		}
+	}
+
+	form {
+		width: 100%;
+		.btn {
+			max-width: 27rem;
+			width: 100%;
+			@media screen and ( max-width: 500px ) {
+				max-width: 100%;
+			}
+		}
+	}
+}

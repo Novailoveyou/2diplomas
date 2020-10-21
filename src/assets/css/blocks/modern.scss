@@ -1,0 +1,52 @@
+.modern {
+	padding: 15rem 0px;
+	@media screen and ( max-width: $large-tablet ) {
+		padding: 10rem 0px;
+	}
+	overflow: hidden;
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media screen and ( max-width: $large_tablet ) {
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		margin-bottom: 3.5rem;
+		@media screen and ( max-width: $large_tablet ) {
+			margin-bottom: 3rem;
+		}
+	}
+	&__text {
+		font-size: 1.8rem;
+		max-width: 59rem;
+		@media screen and ( max-width: $large_tablet ) {
+			width: 100%;
+		}
+		
+		span {
+			color: $primary;
+			font-weight: 500;
+		}
+	}
+
+	&__img {
+		width: calc( 47% + 10% );
+		margin-right: -10%;
+		@media screen and ( max-width: $large_tablet ) {
+			width: 100%;
+			margin-right: 6%;
+			max-width: 500px;
+		}
+	}
+
+	&__left {
+		width: calc( 100% - 47% - 2rem + 10% );
+		@media screen and ( max-width: $large_tablet ) {
+			width: 100%;
+			margin-bottom: 3rem;
+		}
+	}
+}

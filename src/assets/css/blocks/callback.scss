@@ -1,0 +1,76 @@
+.callback {
+	padding: 16rem 0px;
+	background: url('~img/callback__bg.png') center / cover;
+	@media screen and ( max-width: $large-tablet ) {
+		padding: 13rem 0px;
+	}
+	&__title {
+		margin-bottom: 1.5rem;
+		font-size: 2.8rem;
+		@media screen and ( max-width: $large-tablet ) {
+			font-size: 2.4rem;
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&__sub-title {
+		font-size: 1.4rem;
+		line-height: 127.1%;
+		margin-bottom: 4rem;
+		color: #838488;
+		span {
+			color: $primary;
+		}
+
+		@media screen and ( max-width: $large-tablet ) {
+			font-size: 1.2rem;
+			margin-bottom: 3.5rem;
+		}
+	}
+
+	&__wrap {
+		position: relative;
+		z-index: 2;
+		border-radius: 20px;
+		box-shadow: 0px 28px 46px rgba(0, 0, 0, 0.12);
+		background: #fff;
+		padding: 6rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		background: #fff url('~img/callback__logo.png') no-repeat;
+		background-position: calc( 100% - 1rem ) center;
+		max-width: 77rem;
+		margin: 0px auto;
+		@media screen and ( max-width: $large-tablet ) {
+			padding: 5rem 3rem;
+			background-position: calc( 100% - 1rem ) calc( 100% - 1rem );
+			background-size: 10rem auto;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 1rem;
+			left: 1rem;
+			width: calc( 100% - 1rem * 2 );
+			height: calc( 100% - 1rem * 2 );
+			border: 1px solid #E9E9E9;
+			border-radius: 14px;
+
+		}
+		form {
+			max-width: 40rem;
+			.btn {
+				width: 100%;
+				max-width: 27rem;
+				@media screen and ( max-width: $small-tablet ) {
+					max-width: 100%;
+				}
+			}
+		}
+	}
+}

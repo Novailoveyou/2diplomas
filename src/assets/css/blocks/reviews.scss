@@ -1,0 +1,160 @@
+.reviews {
+	padding: 15rem 0px;
+	@media screen and ( max-width: $large-tablet ) {
+		padding: 10rem 0px;
+	}
+	background: $bg;
+	&__title {
+		margin-bottom: 10rem;
+		@media screen and ( max-width: $large-tablet ) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__list {
+		max-width: 103rem;
+		margin: 0px auto;
+	}
+	&__item {
+		display: flex;
+		margin-bottom: 5rem;
+		
+		@media screen and ( max-width: $large_tablet ) {
+			flex-direction: column;
+			flex-direction: column-reverse !important;
+			margin-bottom: 4rem;
+		}
+		
+		&:last-child {
+			margin-bottom: 0px;
+		}
+		
+		&:nth-child(2n){
+			flex-direction: row-reverse;
+		}
+
+		&-wrap {
+			background: #FFFFFF;
+			box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.06);
+			border-radius: 20px;
+			padding: 4.5rem 5rem;
+			position: relative;
+			z-index: 1;
+			@media screen and ( max-width: $large-tablet ) {
+				padding: 3.5rem 3rem;
+				padding-bottom: 5rem;
+			}
+		}
+
+		&-img {
+			width: 11rem;
+			flex-shrink: 0;
+			margin-left: 7rem;
+			@media screen and ( max-width: $large-tablet ) {
+				width: 6rem;
+				margin-bottom: 3.5rem;
+				margin-left: auto;
+				margin-right: 1.5rem;
+			}
+			.reviews__item:nth-child(2n) & {
+				margin-left: 0px;
+				margin-right: 7rem;
+				@media screen and ( max-width: $large-tablet ) {
+					margin-left: 1.5rem;
+				}
+			}
+			> div {
+				position: relative;
+				padding-bottom: 100%;
+				img {
+					position: absolute;
+					top: 0px;
+					left: 0px;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+					border-radius: 50%;
+				}
+			}
+		}
+		&-header {
+			display: flex;
+			align-items: center;
+			margin-bottom: 2rem;
+			position: relative;
+			@media screen and ( max-width: $large-tablet ) {
+				margin-bottom: 2.5rem;
+				position: static;
+			}
+
+			@media screen and ( max-width: $small-tablet ) {
+				align-items: flex-start;
+				flex-direction: column;
+			}
+		}
+
+		&-name {
+			font-weight: bold;
+			font-size: 2.4rem;
+			color: #2B2B2D;
+			@media screen and ( max-width: $large-tablet ) {
+				font-size: 1.8rem;
+			}
+
+			@media screen and ( max-width: $small-tablet ) {
+				margin-bottom: 1rem;
+			}
+		}
+
+		&-quote {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			z-index: -1;
+			@media screen and ( max-width: $large-tablet ) {
+				top: auto;
+				bottom: 2rem;
+				right: 2.5rem;
+			}
+		}
+
+		&-faculty {
+			margin-left: 2rem;
+			background: #F3F3F3;
+			border-radius: 14.5px;
+			line-height: 3rem;
+			padding: 0px 1.6rem;
+			font-weight: 500;
+			font-size: 1.4rem;
+			color: #ACAEB7;
+			@media screen and ( max-width: $small-tablet ) {
+				margin-left: 0px;
+			}
+		}
+
+		&-svg {
+			position: absolute;
+			left: calc( 100% - 5px );
+			display: flex;
+			align-items: center;
+			top: 5.5rem;
+			@media screen and ( max-width: $large-tablet ) {
+				left: auto;
+				right: calc( 1.5rem + 3rem );
+				top: auto;
+				bottom: calc( 100% - 5px );
+				transform: rotate(180deg);
+			}
+			.reviews__item:nth-child(2n) & {
+				left: auto;
+				right: calc( 100% - 5px );
+				transform: scale(-1, 1);
+				@media screen and ( max-width: $large-tablet ) {
+					transform: scale(-1, 1) rotate(180deg);
+					right: auto;
+					left: calc( 1.5rem + 3rem );
+				}
+			}
+		}
+	}
+}

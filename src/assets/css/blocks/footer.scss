@@ -1,0 +1,140 @@
+.footer {
+	background: url('~img/footer__logo.png') no-repeat left center,linear-gradient(264.58deg, #0057FF -5.48%, #25B1FF 102.16%) center / cover;
+	color: #fff;
+	padding: 7rem 0px;
+	line-height: 17 / 14 * 1;
+	font-size: 1.4rem;
+	@media screen and ( max-width: $large-tablet ) {
+		padding: 9rem 0px;
+		padding-bottom: 7rem;
+		background-position: 0px 5rem, center;
+	}
+	&__wrap{
+		display: flex;
+		@media screen and ( max-width: $large-tablet ) {
+			flex-wrap: wrap;
+		}
+		@media screen and ( max-width: $small-tablet ) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media screen and ( max-width: $large-tablet ) {
+			order: 2;
+			margin-top: 5rem;
+			width: 50%;
+		}
+		@media screen and ( max-width: $small-tablet ) {
+			margin-top: 0px;
+			order: initial;
+			width: 100%;
+		}
+	}
+
+	&__items {
+		@media screen and ( max-width: $large-tablet ) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__item {
+		font-weight: 600;
+		display: flex;
+		align-items: center;
+		margin-bottom: 1.5rem;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+		@media screen and ( max-width: $large-tablet ) {
+			font-size: 1.2rem;
+		}
+		span {
+			font-weight: 300;
+		}
+		svg {
+			margin-right: 2.5rem;
+			@media screen and ( max-width: $large-tablet ) {
+				margin-right: 1.5rem;
+			}
+		}
+
+		a {
+			cursor: pointer;
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0px;
+				bottom: -1px;
+				width: 100%;
+				height: 1px;
+				background: #fff;
+				opacity: 1;
+				transition: all 0.5s;
+			}
+			&:hover {
+				&::before {
+					width: 0px;		
+					opacity: 0;
+				}	
+			}
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-right: 8.5rem;
+		&:last-child {
+			margin-right: 0px;
+		}
+	}
+
+	&__link {
+		font-weight: bold;
+		margin-bottom: 2rem;
+		cursor: pointer;
+		position: relative;
+		display: block;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0px;
+			bottom: 1px;
+			width: 100%;
+			height: 1px;
+			background: #fff;
+			opacity: 1;
+			transition: all 0.5s;
+			@media screen and ( max-width: $large-tablet ) {
+				bottom: 0px;
+			}
+		}
+		&:hover {
+			&::before {
+				width: 0px;		
+				opacity: 0;
+			}	
+		}
+	}
+
+	&__socials {
+		@media screen and ( max-width: $small-tablet ) {
+			margin-bottom: 7rem;
+		}
+		&-title {
+			font-weight: bold;
+			font-size: 2.2rem;
+			margin-bottom: 2.5rem;
+			@media screen and ( max-width: $large-tablet ) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}

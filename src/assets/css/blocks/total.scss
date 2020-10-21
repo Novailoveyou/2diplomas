@@ -1,0 +1,106 @@
+.total {
+ 	background: $bg;
+	padding: 15rem 0px;
+	@media screen and ( max-width: $large-tablet ) {
+		padding: 10rem 0px;
+	}
+	.wrap {
+		max-width: 82rem;
+	}
+	&__title {
+		margin-bottom: 7rem;
+		@media screen and ( max-width: $large-tablet ) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin: 0px auto;
+		margin-bottom: -3.5rem;
+		max-width: 1000px;
+		@media screen and ( max-width: $large-tablet ) {
+			margin-bottom: -1rem;
+		}
+	}
+
+	&__item {
+		width: calc( ( 100% - 5rem * 2  ) / 3 );
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		position: relative;
+		margin-bottom: 3.5rem;
+		@media screen and ( max-width: $large-tablet ) {
+			width: calc( ( 100% - 2rem * 1  ) / 2 );
+			margin-bottom: 1rem;
+		}
+		&-text {
+			font-size: 1.6rem;
+			line-height: 20 / 16 * 1;
+			text-align: center;
+			color: #62666B;
+			margin-top: 3rem;
+			@media screen and ( max-width: $large-tablet ) {
+				font-size: 1.3rem;
+			}
+		}
+
+		&-img {
+			margin-bottom: 2rem;
+			height: 14rem;
+			display: flex;
+			align-items: flex-end;
+			@media screen and ( max-width: $large-tablet ) {
+				margin-bottom: 1rem;
+			}
+			@media screen and ( max-width: 450px ) {
+				transform: scale(0.8);
+				margin-bottom: -1rem;
+			}
+
+			@media screen and ( max-width: 350px ) {
+				transform: scale(0.75);
+			}
+			img {
+				max-width: 300px;
+				.total__item:nth-child(1) & {
+					margin-bottom: -25px;
+				}
+				.total__item:nth-child(2) & {
+					margin-bottom: -105px;
+					margin-left: 8%;
+				}
+				.total__item:nth-child(3) & {
+					margin-bottom: -45px;
+					margin-left: 7%;
+				}
+				.total__item:nth-child(4) & {
+					margin-bottom: -60px;
+					margin-left: 7%;
+				}
+				.total__item:nth-child(5) & {
+					margin-bottom: -25px;
+					margin-left: 5%;
+				}
+				.total__item:nth-child(6) & {
+					margin-bottom: -60px;
+					margin-left: 5%;
+				}
+			}
+
+		}
+
+		&-number {
+			font-weight: bold;
+			font-size: 4.5rem;
+			color: rgba(255, 255, 255, 0.9);
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	}
+}

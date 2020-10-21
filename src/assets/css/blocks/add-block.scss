@@ -1,0 +1,108 @@
+.add-block {
+	background: #fff url('~img/add-block__logo.png') no-repeat;
+	background-position: calc( 100% - 0.6rem )  center;
+	margin-top: 10rem;
+	border-radius: 20px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6rem 10rem;
+	box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.1);
+	@media screen and ( max-width: $large-tablet ) {
+		flex-direction: column !important;
+		background-position: calc( 100% - 0.6rem )  0.6rem;
+		padding: 5rem 3.5rem !important;
+	}
+
+
+	&--reverse {
+		flex-direction: row-reverse;
+		.btn {
+			margin-left: 0px !important;
+			margin-right: 5rem;
+		}
+	}
+	.tarifs & {
+		padding-left: 8rem;
+		@media screen and ( max-width: $large-tablet ) {
+			width: 100% !important;
+		}
+		.btn {
+			margin-left: 3rem;
+		}
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0.6rem;
+		left: 0.6rem;
+		width: calc( 100% - ( 0.6rem * 2 ) );
+		height: calc( 100% - ( 0.6rem * 2 ) );
+		border-radius: 15px;
+		z-index: 2;
+		border: 1px solid #E9E9E9;
+		pointer-events: none;
+	}
+
+	&__content {
+		font-weight: bold;
+		font-size: 2.4rem;
+		line-height: 142.9%;
+		color: #4C535A;
+		@media screen and ( max-width: $large-tablet ) {
+			font-size: 2rem;
+			.tarifs .add-block & {
+				font-size: 1.8rem;
+			}
+		}
+
+		.tarifs__list & { 
+			margin-right: 0px;	
+			font-size: 2rem;
+			font-weight: 500;
+		}
+		.add-block--programms & {
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 142.9%;
+			@media screen and ( max-width: $large-tablet ) {
+				font-size: 1.3rem;
+			}
+			.h2 {
+				margin-bottom: 1rem;
+				color: #4C535A;
+			}
+		}
+		span {
+			color: $primary;
+		}
+		.scheme & {
+			max-width: 55rem;
+		}
+	}
+
+	.btn {
+		max-width: 27rem;
+		width: 100%;
+		margin-left: 5rem;
+		@media screen and ( max-width: $large-tablet ) {
+			margin-right: 0 !important;
+			margin-left: 0 !important;
+			margin-top: 2.5rem;
+		}
+				.tarifs__list & { 
+			margin: 0px !important;
+			margin-top: 4rem !important;	
+		}
+	}
+
+	.tarifs__list & {
+		    width: calc( ( 100% - 3rem * 1 ) / 2);
+		    margin: 0px;
+		    flex-direction: column;
+		    align-items: center;
+		    text-align: center;
+		    justify-content: center;
+	}
+}

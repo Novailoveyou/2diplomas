@@ -1,0 +1,65 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 7.5rem;
+	@media screen and ( max-width: $large_tablet ) {
+		margin-top: 3rem;
+	}
+	&__arrow {
+		cursor: pointer;
+		&--prev {
+			margin-right: 2rem;
+		}
+		&--next {
+			margin-left: 2rem;
+			transform: rotate(180deg);
+		}
+
+		&:hover * {
+			fill: $primary;
+		}
+	}
+
+	&__item {
+		font-size: 1.4rem;
+		color: #696A6F;
+		transition: all 0.5s;
+		cursor: pointer;
+		position: relative;
+		margin: 0px 0.8rem;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0px;
+			bottom: -8px;
+			width: 0%;
+			height: 2px;
+			background: #ccc;
+			opacity: 0;
+			transition: all 0.5s;
+		}
+		&:hover {
+			&::before {
+				width: 100%;		
+				opacity: 1;
+			}	
+		}
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+
+		&--current {
+			background: $primary;
+			color: #fff;
+			border-radius: 50%;
+			width: 3rem;
+			height: 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

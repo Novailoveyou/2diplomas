@@ -1,0 +1,45 @@
+.breads {
+	margin: 6rem 0px;
+	@media screen and ( max-width: $large-tablet ) {
+		margin: 5rem 0px;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		font-size: 1.4rem;
+		color: #6F7276;
+	}
+	&__sep {
+		margin: 0px 1rem;
+	}
+
+
+	&__link {
+		cursor: pointer;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+			width: 0px;
+			height: 1px;
+			background: #6F7276;
+			opacity: 0;
+			transition: all 0.5s;
+		}
+		&:hover {
+			&::before {
+				width: 100%;		
+				opacity: 0.9;
+			}	
+		}
+		&--active {
+			pointer-events: none;
+			&::before {
+				opacity: 0.9;
+				width: 100%;
+			}
+		}
+	}
+}

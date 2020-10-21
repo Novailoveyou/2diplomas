@@ -1,0 +1,127 @@
+.institute {
+	padding: 14.5rem 0px;
+	@media screen and ( max-width: $large-tablet ) {
+		padding: 10rem 0px;
+	}
+	&__title {
+		margin-bottom: 6rem;
+		@media screen and ( max-width: $large_tablet ) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	.center-wrap {
+
+		@media screen and ( max-width: $small-tablet ) {
+			padding-left: calc( ( 100% - 470px ) / 2 );
+			max-width: 100%;
+			padding-right: 0px;
+		}
+
+		@media screen and ( max-width: 500px + 15px ) {
+			padding-left: 15px;
+		}
+
+		@media screen and ( max-width: 500px ) {
+			padding-left: 15px;
+		}
+	}
+	&__wrap {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media screen and ( max-width: $large_tablet ) {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		@media screen and ( max-width: $small-tablet ) {
+			flex-direction: column;
+		}
+	}
+
+	&__img {
+		width: 42.5%;
+		@media screen and ( max-width: $large-tablet ) {
+			width: 35%;
+		}
+		@media screen and ( max-width: $small-tablet ) {
+			width: auto;
+			flex-grow: 1;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	&__right {
+		width: calc( 100% - 42.5% - 2rem );
+		@media screen and ( max-width: $small-tablet ) {
+			margin-right: auto;
+			width: auto;
+		}
+	}
+
+	&__text {
+		font-size: 2rem;
+		line-height: 162.9%;
+		color: #46484B;
+		margin-bottom: 4rem;
+		@media screen and ( max-width: $large_tablet ) {
+			font-size: 1.3rem;
+			margin-bottom: 2rem;
+		}
+
+		@media screen and ( max-width: $small-tablet ) {
+			display: none;
+		}
+
+
+		&--mobile {
+			display: none;
+			@media screen and ( max-width: $small-tablet ) {
+				display: block;	
+			}
+		}
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		@media screen and ( max-width: $large-tablet ) {
+			margin-right: 2rem;
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+		@media screen and ( max-width: $small-tablet ) {
+			margin-bottom: 1.8rem;
+			margin-right: 0px;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+		&-number {
+			background: linear-gradient(180deg, #3183FF 0%, #8AB9FF 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			font-weight: 800;
+			font-size: 5rem;
+			margin-bottom: 1rem;
+			@media screen and ( max-width: $large-tablet ) {
+				font-size: 3.2rem;
+				margin-bottom: 0.5rem;
+			}
+		}
+
+		&-text {
+			font-size: 1.6rem;
+			line-height: 20 / 16 * 1;
+			color: #6C6C6C;
+			@media screen and ( max-width: $large-tablet ) {
+				font-size: 1.3rem;
+			}
+		}
+	}
+}

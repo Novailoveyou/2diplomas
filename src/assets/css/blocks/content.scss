@@ -1,0 +1,19 @@
+.content {
+	font-size: 1.5rem;
+	line-height: 166%;
+	color: #505056;
+	
+	&--large {
+		font-size: 1.8rem;
+	}
+	@media screen and ( max-width: $large-tablet ) {
+		font-size: 1.2rem;
+	}
+
+	p {
+		margin-bottom: 1.5rem;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+}

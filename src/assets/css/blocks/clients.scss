@@ -1,0 +1,99 @@
+.clients {
+  margin: 15rem 0px;
+  @media screen and ( max-width: $large-tablet ) {
+    margin: 10rem 0px;
+  }
+
+  .center-wrap {
+    @media screen and ( max-width: $large-tablet ) {
+      max-width: 100%;
+      padding-right: 0px;
+      padding-left: calc( ( 100% - 738px ) / 2 );
+    }
+
+    @media screen and ( max-width: $small-tablet + 15px ) {
+      padding-left: 15px;
+    }
+
+    @media screen and ( max-width: $small-tablet ) {
+      padding-left: calc( ( 100% - 470px ) / 2 );
+    }
+
+    @media screen and ( max-width: 500px + 15px ) {
+      padding-left: 15px;
+    }
+
+    @media screen and ( max-width: 500px ) {
+      padding-left: 15px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 8rem;
+    @media screen and ( max-width: $large-tablet ) {
+      padding-right: 10px;
+      margin-bottom: 5rem;
+      padding-right: 15px;
+    }
+  }
+
+  &__slider {
+    padding-bottom: 4rem;
+    position: relative;
+    @media screen and ( min-width: $large-tablet ) {
+      height: 300px;
+    }
+    @media screen and ( max-width: $small-tablet ) {
+      padding-bottom: 0px;
+    }
+
+    .swiper {
+      &-container {
+        @media screen and ( max-width: $large-tablet ) {
+          padding-right: 20%;
+        }
+      }
+    }
+  }
+
+  .swiper {
+    &-slide {
+      display: flex;
+      @media screen and ( min-width: $large-tablet ) {
+        height: calc((100% - 30px) / 2);
+      }
+    }
+
+    &-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      @media screen and ( max-width: $large-tablet ) {
+        display: none;
+      }
+      &-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0px 1.2rem !important;
+        transition: all 0.3s;
+        @media screen and ( max-width: $large-tablet ) {
+          margin: 0px 0.5rem !important;
+          width: 0.8rem;
+          height: 0.8rem;
+        }
+        &:hover:not(.swiper-pagination-bullet-active) {
+          opacity: 0.1 !important;
+        }
+      }
+    }
+  }
+  .clients__item {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -1,0 +1,42 @@
+.inputs {
+    input {
+        &:not([type='submit']),
+        textarea {
+            border: none;
+            width: 100%;
+            line-height: 5rem;
+            caret-color: $primary;
+            padding-left: 2.8rem;
+            background: #F2F3F9;
+            box-shadow: inset 0px 3px 10px rgba(0, 38, 96, 0.03);
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            @media screen and ( max-width: $large-tablet ) {
+                margin-bottom: 1.5rem;
+            }
+            &:last-child {
+                margin-bottom: 0px;
+            }
+            font-size: 1.6rem;
+
+            &::-webkit-input-placeholder {color: rgba(71, 71, 101, 0.5);}
+            &::-moz-placeholder          {color: rgba(71, 71, 101, 0.5);}/* Firefox 19+ */
+            &:-moz-placeholder           {color: rgba(71, 71, 101, 0.5);}/* Firefox 18- */
+            &:-ms-input-placeholder      {color: rgba(71, 71, 101, 0.5);}
+        }
+    }
+
+    .btn {
+        margin-top: 1.5rem;
+        @media screen and ( max-width: $large-tablet ) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    &--column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
