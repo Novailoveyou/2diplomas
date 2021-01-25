@@ -1,4 +1,5 @@
 import { programPage } from '../pages/programPage.js'
+import { callGeneralFuncs } from '../general'
 
 const productScreen = function (screen) {
   const currentUrl = window.location.href
@@ -17,6 +18,8 @@ const productScreen = function (screen) {
   const populateUI = async () => {
     const html = await programPage()
     main.innerHTML = html
+
+    callGeneralFuncs()
   }
 
   populateUI()
