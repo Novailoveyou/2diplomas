@@ -1,5 +1,4 @@
-import { makeReq } from '../utils/makeReq'
-import { cpUrlRoot } from '../constants/apiUrls'
+import { programPage } from '../pages/programPage.js'
 
 const productScreen = function (screen) {
   const currentUrl = window.location.href
@@ -14,28 +13,15 @@ const productScreen = function (screen) {
 
   const main = document.querySelector('main')
   main.id = 'program-screen'
-  // main.innerHTML = `Страница программы`
-
-  console.log('Program Screen')
 
   const populateUI = async () => {
-    const req = await makeReq('GET', `${cpUrlRoot}/api/v1/courses`)
-
-    console.log(req)
-
-    const { data } = req
-    let requestedProgram
-
-    data.forEach((program) => {
-      if (programUrl === program.url) {
-        requestedProgram = program
-      }
-    })
-
-    console.log(requestedProgram)
+    const html = await programPage()
+    main.innerHTML = html
   }
 
   populateUI()
+
+  console.log('Program Screen')
 }
 
 export { productScreen }
