@@ -7,7 +7,7 @@ const productScreen = function (screen) {
   const programUrl = currentUrlArr[4]
 
   window.history.pushState(
-    { page_id: `${programUrl === undefined ? null : programUrl}` },
+    { page_id: `${programUrl === undefined ? null : 'programs/'+programUrl}` },
     '',
     `/programs/${programUrl === undefined ? '' : programUrl}`
   )

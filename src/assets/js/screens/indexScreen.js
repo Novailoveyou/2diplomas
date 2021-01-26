@@ -2,7 +2,7 @@ import { indexPage } from '../pages/indexPage.js'
 import { callGeneralFuncs } from '../general'
 
 const indexScreen = function (screen) {
-  window.history.pushState({ page_id: 1 }, '', '/')
+  window.history.pushState({ page_id: 'index' }, '', '/')
 
   const main = document.querySelector('main')
   main.id = 'index-screen'
